@@ -16,6 +16,7 @@ body{
 }
 
 form{
+    width: 350px;
     background-color: white;
     padding: 16px;
     border-radius: 10px;
@@ -38,4 +39,43 @@ form input, select, textarea{
 textarea{
     height: 100px;
 
+}
+
+h1{
+    height: 50px;
+}
+
+form button{
+    width: 50%;
+    height: 30px;
+    display: block;
+    margin: auto;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    letter-spacing: 1px; /* espaçamento estre as letras */
+    text-transform: uppercase; /*deixar todas as letras maiusculas */
+    transition-duration: 200ms; /*transição*/
+    position: relative;
+    overflow: hidden;
+}
+
+form button:hover{
+    background-color: rgb(69, 69, 255);
+}
+
+form button::after{
+    content:"";
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    background-color: #ffffff20;
+    transform: skewX(40deg); /*angulação*/
+    transition-duration: 200ms;
+}
+
+form button:hover::after{
+    left: 100%;
 }
